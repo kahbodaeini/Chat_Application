@@ -1,0 +1,62 @@
+0
+create data bases for channels , users and msgs
+1
+scan the request
+2
+whats the req??
+3
+3.1
+register
+searching for the username in the database
+if it was there error if not sending successful msg
+3.2
+login
+searching for the user name in the database
+if it was there check the password if it was right assign a token
+if not send error msg
+or if there is no such a name in the data base send error msg
+3.3
+create channel
+scanning channel name and the auto token
+check the token
+if there is no such a token send error msg
+searching for the channel name in the data base
+if there is a channel with this name send error msg
+if not make the channel and send successful msg
+3.4
+join channel
+check the token
+if there is no such a token send error msg
+scan the channel name if there is no channel with this name send error msg
+if everythings fine add the user to the channel and send successful msg
+3.5
+send msg
+check the token
+if there is no such a token send error msg
+if the user is not a member of any channel send error msg
+if everything is fine add the msg to the channel's msgs
+3.6
+refresh
+client uses this req for recieving the unseen msgs
+check the token
+if there is no such a token send error msg
+if the user is not a member of any channel send error msg
+if everything is fine show the msgs
+3.7
+channel members
+check the token
+if there is no such a token send error msg
+if the user is not a member of any channel send error msg
+if everything is fine find the channel members in the data base and send it to the client
+3.8
+leave
+check the token
+if there is no such a token send error msg
+if the user is not a member of any channel send error msg
+if everything is fine delete the member from the subscribers of the channel and send the successful msg
+3.9
+logout
+check the token
+if there is no such a token send error msg
+if the user is not a member of any channel send error msg
+if everything is fine delete the auto token and delete the user from the online users list and send the successful msg
